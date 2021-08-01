@@ -1,5 +1,4 @@
 local utils = require('utils')
-require('plugins/tools')
 
 -- Regular stuff
 utils.map('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights

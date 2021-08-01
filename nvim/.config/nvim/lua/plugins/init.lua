@@ -33,5 +33,8 @@ return require('packer').startup(function()
   -- Editor
   use { 'junegunn/vim-easy-align' }
   use { 'easymotion/vim-easymotion' }
-	
+
+  -- Markdown
+  use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+
 end)

@@ -36,6 +36,9 @@ local plug_map = {
     ["|<leader>f"] = map_cmd("v:lua.enhance_move('lf')"):with_expr(),
     ["|<leader>w"] = map_cmd("v:lua.enhance_move('lw')"):with_expr(),
 
+    -- Markdown preview
+    ["n|<F12>"] = map_cr('MarkdownPreviewToggle'):with_noremap():with_silent(),
+
 };
 
 bind.nvim_load_mapping(plug_map)

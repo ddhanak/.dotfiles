@@ -1,9 +1,5 @@
-local vim = vim
 local utils = require('utils')
-
-local t = function(str)
-    return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
+require('plugins/tools')
 
 -- Regular stuff
 utils.map('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights
@@ -21,4 +17,6 @@ utils.map('n', '<leader>gs', '<Esc>:Git<CR>')
 -- Nvim Tree
 utils.map('n', '<C-n>', ':NvimTreeToggle<CR>')
 
-
+-- Easy Align
+utils.map('n', 'ga', '<Plug>(EasyAlign)', {})
+utils.map('x', 'ga', '<Plug>(EasyAlign)', {})

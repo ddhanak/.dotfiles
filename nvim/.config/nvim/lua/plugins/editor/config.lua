@@ -10,5 +10,3 @@ function config.nvim_treesitter()
 end
 
 return config
-
-

@@ -27,6 +27,15 @@ local plug_map = {
     ["n|ga"] = map_cmd("v:lua.enhance_align('nga')"):with_expr(),
     ["x|ga"] = map_cmd("v:lua.enhance_align('xga')"):with_expr(),
 
+    -- Easymotion (normal motions)
+    ["n|<leader>j"] = map_cmd("v:lua.enhance_move('lnj')"):with_expr(),
+    ["n|<leader>k"] = map_cmd("v:lua.enhance_move('lnk')"):with_expr(),
+    ["n|<leader>f"] = map_cmd("v:lua.enhance_move('lnf')"):with_expr(),
+    ["n|<leader>w"] = map_cmd("v:lua.enhance_move('lnw')"):with_expr(),
+    -- Easymotion (overwin motions)
+    ["|<leader>f"] = map_cmd("v:lua.enhance_move('lf')"):with_expr(),
+    ["|<leader>w"] = map_cmd("v:lua.enhance_move('lw')"):with_expr(),
+
 };
 
 bind.nvim_load_mapping(plug_map)

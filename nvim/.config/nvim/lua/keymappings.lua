@@ -1,7 +1,19 @@
+local vim = vim
 local utils = require('utils')
 
+local t = function(str)
+    return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+-- Regular stuff
 utils.map('n', '<C-l>', '<cmd>noh<CR>') -- Clear highlights
 utils.map('i', 'jk', '<Esc>')           -- jk to escape
+
+-- Telescope
+utils.map('n', '<leader>ff', '<cmd>Telescope find_files<CR>')
+utils.map('n', '<leader>fg', '<cmd>Telescope live_grep<CR>')
+utils.map('n', '<leader>fb', '<cmd>Telescope buffers<CR>')
+utils.map('n', '<leader>fh', '<cmd>Telescope help_tags<CR>')
 
 -- Vim Fugitive
 utils.map('n', '<leader>gs', '<Esc>:Git<CR>')
@@ -9,8 +21,4 @@ utils.map('n', '<leader>gs', '<Esc>:Git<CR>')
 -- Nvim Tree
 utils.map('n', '<C-n>', ':NvimTreeToggle<CR>')
 
--- Easy Align
--- TODO: those mappings do not work yet
-utils.map('x', 'ga', ':EasyAlign')
-utils.map('n', 'ga', ':EasyAlign')
 

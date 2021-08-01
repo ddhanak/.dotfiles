@@ -20,5 +20,9 @@ return require('packer').startup(function()
   use { 'tpope/vim-fugitive' }
   use { 'tpope/vim-commentary' }
   use { 'tpope/vim-surround' }
+
+  -- Editor
+  use { 'junegunn/vim-easy-align' }
+  use { 'easymotion/vim-easymotion' }
 	
 end)

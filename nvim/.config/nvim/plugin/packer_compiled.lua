@@ -79,12 +79,28 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/deep/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
+  ["lsp_signature.nvim"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/deep/.local/share/nvim/site/pack/packer/opt/lsp_signature.nvim"
+  },
+  ["lspkind-nvim"] = {
+    config = { "\27LJ\1\2�\2\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\15symbol_map\1\0\20\tText\b\rFunction\b\nClass\b\nColor\b\14Interface\bﰮ\vModule\b\rConstant\b\vMethod\aƒ\tUnit\b\15EnumMember\b\rProperty\b\vStruct\b\rVariable\b\fSnippet\b﬌\vFolder\b\tFile\b\nValue\b\16Constructor\b\tEnum\b了\fKeyword\b\1\0\2\vpreset\rcodicons\14with_text\2\tinit\flspkind\frequire\0" },
+    loaded = true,
+    path = "/home/deep/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/deep/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
   ["lualine.nvim"] = {
     config = { "\27LJ\1\2�\4\0\0\6\0 \00034\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\5\0003\2\3\0002\3\0\0:\3\4\2:\2\6\0013\2\b\0003\3\a\0:\3\t\0023\3\n\0:\3\v\0022\3\3\0003\4\f\0;\4\1\0033\4\r\0003\5\14\0:\5\15\0043\5\16\0:\5\17\4;\4\2\3:\3\18\0023\3\19\0:\3\20\0023\3\21\0:\3\22\0023\3\23\0:\3\24\2:\2\25\0013\2\26\0002\3\0\0:\3\t\0022\3\0\0:\3\v\0023\3\27\0:\3\18\0023\3\28\0:\3\20\0022\3\0\0:\3\22\0022\3\0\0:\3\24\2:\2\29\0012\2\0\0:\2\30\0012\2\0\0:\2\31\1>\0\2\1G\0\1\0\15extensions\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\fsymbols\1\0\3\tinfo\t \twarn\t \nerror\t \fsources\1\2\0\0\rnvim_lsp\1\2\0\0\16diagnostics\1\2\0\0\rfilename\14lualine_b\1\2\0\0\vbranch\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\23disabled_filetypes\1\0\2\18icons_enabled\2\ntheme\vgithub\nsetup\flualine\frequire\0" },
     loaded = true,
     path = "/home/deep/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
+    commands = { "MarkdownPreview" },
     loaded = false,
     needs_bufread = false,
     path = "/home/deep/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
@@ -92,6 +108,20 @@ _G.packer_plugins = {
   ["nlua.nvim"] = {
     loaded = true,
     path = "/home/deep/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+  },
+  ["nvim-compe"] = {
+    config = { "\27LJ\1\2�\3\0\0\4\0\b\0\v4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0003\3\5\0:\3\6\2:\2\a\1>\0\2\1G\0\1\0\vsource\ftabnine\1\0\6\20max_num_results\3\6\rpriority\3�'\rmax_line\3�\a\19ignore_pattern\b[(]\29show_prediction_strength\2\tsort\1\1\0\n\forgmode\2\ttags\2\rnvim_lsp\2\19snippetSupport\2\15treesitter\2\tpath\2\rnvim_lua\2\nspell\2\vbuffer\2\tcalc\2\1\0\r\20resolve_timeout\3�\6\19source_timeout\3�\1\fenabled\2\ndebug\1\14preselect\venable\19max_abbr_width\3d\21incomplete_delay\3�\3\17autocomplete\2\19max_kind_width\3d\15min_length\3\1\18throttle_time\3P\19max_menu_width\3d\18documentation\2\nsetup\ncompe\frequire\0" },
+    loaded = true,
+    path = "/home/deep/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
+  ["nvim-lspconfig"] = {
+    after = { "lsp_signature.nvim" },
+    loaded = true,
+    only_config = true
+  },
+  ["nvim-lspinstall"] = {
+    loaded = true,
+    path = "/home/deep/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
   },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\1\2�\5\0\0\3\0\20\0?4\0\0\0007\0\1\0'\1#\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\3\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\1\0:\1\5\0004\0\0\0007\0\1\0'\1\1\0:\1\6\0004\0\0\0007\0\1\0'\1\1\0:\1\a\0004\0\0\0007\0\1\0'\1\1\0:\1\b\0004\0\0\0007\0\1\0'\1\0\0:\1\t\0004\0\0\0007\0\1\0'\1\1\0:\1\n\0004\0\0\0007\0\1\0'\1\1\0:\1\v\0004\0\0\0007\0\1\0'\1\1\0:\1\f\0004\0\0\0007\0\1\0'\1\1\0:\1\r\0004\0\0\0007\0\1\0'\1\1\0:\1\b\0004\0\0\0007\0\1\0003\1\15\0:\1\14\0004\0\0\0007\0\1\0003\1\17\0003\2\18\0:\2\19\1:\1\16\0G\0\1\0\bgit\1\0\5\runstaged\b✚\14untracked\b★\runmerged\b≠\frenamed\b≫\vstaged\b✚\1\0\2\fdefault\b\fsymlink\b\20nvim_tree_icons\1\4\0\0\t.git\17node_modules\v.cache\21nvim_tree_ignore\30nvim_tree_lsp_diagnostics\23nvim_tree_tab_open%nvim_tree_highlight_opened_files\21nvim_tree_git_hl\28nvim_tree_hide_dotfiles\29nvim_tree_indent_markers\27nvim_tree_quit_on_open\25nvim_tree_auto_close\24nvim_tree_auto_open\24nvim_tree_gitignore\21nvim_tree_follow\20nvim_tree_width\6g\bvim\0" },
@@ -151,14 +181,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\1\2�\1\0\0\3\0\b\0\v4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\4\0003\2\3\0:\2\5\0013\2\6\0:\2\a\1>\0\2\1G\0\1\0\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\a\0\0\blua\vpython\tyaml\tjson\vpython\15javascript\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
--- Config for: twilight.nvim
-time([[Config for twilight.nvim]], true)
-try_loadstring("\27LJ\1\2:\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
-time([[Config for twilight.nvim]], false)
+-- Config for: nvim-lspconfig
+time([[Config for nvim-lspconfig]], true)
+try_loadstring("\27LJ\1\0025\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\26plugins.lsp.lspconfig\frequire\0", "config", "nvim-lspconfig")
+time([[Config for nvim-lspconfig]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\1\2�\5\0\0\3\0\20\0?4\0\0\0007\0\1\0'\1#\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\3\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\1\0:\1\5\0004\0\0\0007\0\1\0'\1\1\0:\1\6\0004\0\0\0007\0\1\0'\1\1\0:\1\a\0004\0\0\0007\0\1\0'\1\1\0:\1\b\0004\0\0\0007\0\1\0'\1\0\0:\1\t\0004\0\0\0007\0\1\0'\1\1\0:\1\n\0004\0\0\0007\0\1\0'\1\1\0:\1\v\0004\0\0\0007\0\1\0'\1\1\0:\1\f\0004\0\0\0007\0\1\0'\1\1\0:\1\r\0004\0\0\0007\0\1\0'\1\1\0:\1\b\0004\0\0\0007\0\1\0003\1\15\0:\1\14\0004\0\0\0007\0\1\0003\1\17\0003\2\18\0:\2\19\1:\1\16\0G\0\1\0\bgit\1\0\5\runstaged\b✚\14untracked\b★\runmerged\b≠\frenamed\b≫\vstaged\b✚\1\0\2\fdefault\b\fsymlink\b\20nvim_tree_icons\1\4\0\0\t.git\17node_modules\v.cache\21nvim_tree_ignore\30nvim_tree_lsp_diagnostics\23nvim_tree_tab_open%nvim_tree_highlight_opened_files\21nvim_tree_git_hl\28nvim_tree_hide_dotfiles\29nvim_tree_indent_markers\27nvim_tree_quit_on_open\25nvim_tree_auto_close\24nvim_tree_auto_open\24nvim_tree_gitignore\21nvim_tree_follow\20nvim_tree_width\6g\bvim\0", "config", "nvim-tree.lua")
@@ -167,21 +193,40 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for github-nvim-theme]], true)
 try_loadstring("\27LJ\1\2�\1\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\rsidebars\1\5\0\0\aqf\15vista_kind\rterminal\vpacker\1\0\1\18functionStyle\vitalic\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
 time([[Config for github-nvim-theme]], false)
+-- Config for: nvim-compe
+time([[Config for nvim-compe]], true)
+try_loadstring("\27LJ\1\2�\3\0\0\4\0\b\0\v4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0003\3\5\0:\3\6\2:\2\a\1>\0\2\1G\0\1\0\vsource\ftabnine\1\0\6\20max_num_results\3\6\rpriority\3�'\rmax_line\3�\a\19ignore_pattern\b[(]\29show_prediction_strength\2\tsort\1\1\0\n\forgmode\2\ttags\2\rnvim_lsp\2\19snippetSupport\2\15treesitter\2\tpath\2\rnvim_lua\2\nspell\2\vbuffer\2\tcalc\2\1\0\r\20resolve_timeout\3�\6\19source_timeout\3�\1\fenabled\2\ndebug\1\14preselect\venable\19max_abbr_width\3d\21incomplete_delay\3�\3\17autocomplete\2\19max_kind_width\3d\15min_length\3\1\18throttle_time\3P\19max_menu_width\3d\18documentation\2\nsetup\ncompe\frequire\0", "config", "nvim-compe")
+time([[Config for nvim-compe]], false)
+-- Config for: lspkind-nvim
+time([[Config for lspkind-nvim]], true)
+try_loadstring("\27LJ\1\2�\2\0\0\3\0\6\0\t4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\3\0003\2\4\0:\2\5\1>\0\2\1G\0\1\0\15symbol_map\1\0\20\tText\b\rFunction\b\nClass\b\nColor\b\14Interface\bﰮ\vModule\b\rConstant\b\vMethod\aƒ\tUnit\b\15EnumMember\b\rProperty\b\vStruct\b\rVariable\b\fSnippet\b﬌\vFolder\b\tFile\b\nValue\b\16Constructor\b\tEnum\b了\fKeyword\b\1\0\2\vpreset\rcodicons\14with_text\2\tinit\flspkind\frequire\0", "config", "lspkind-nvim")
+time([[Config for lspkind-nvim]], false)
 -- Config for: lualine.nvim
 time([[Config for lualine.nvim]], true)
 try_loadstring("\27LJ\1\2�\4\0\0\6\0 \00034\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\5\0003\2\3\0002\3\0\0:\3\4\2:\2\6\0013\2\b\0003\3\a\0:\3\t\0023\3\n\0:\3\v\0022\3\3\0003\4\f\0;\4\1\0033\4\r\0003\5\14\0:\5\15\0043\5\16\0:\5\17\4;\4\2\3:\3\18\0023\3\19\0:\3\20\0023\3\21\0:\3\22\0023\3\23\0:\3\24\2:\2\25\0013\2\26\0002\3\0\0:\3\t\0022\3\0\0:\3\v\0023\3\27\0:\3\18\0023\3\28\0:\3\20\0022\3\0\0:\3\22\0022\3\0\0:\3\24\2:\2\29\0012\2\0\0:\2\30\0012\2\0\0:\2\31\1>\0\2\1G\0\1\0\15extensions\ftabline\22inactive_sections\1\2\0\0\rlocation\1\2\0\0\rfilename\1\0\0\rsections\14lualine_z\1\2\0\0\rlocation\14lualine_y\1\2\0\0\rprogress\14lualine_x\1\4\0\0\rencoding\15fileformat\rfiletype\14lualine_c\fsymbols\1\0\3\tinfo\t \twarn\t \nerror\t \fsources\1\2\0\0\rnvim_lsp\1\2\0\0\16diagnostics\1\2\0\0\rfilename\14lualine_b\1\2\0\0\vbranch\14lualine_a\1\0\0\1\2\0\0\tmode\foptions\1\0\0\23disabled_filetypes\1\0\2\18icons_enabled\2\ntheme\vgithub\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 time([[Config for lualine.nvim]], false)
+-- Config for: twilight.nvim
+time([[Config for twilight.nvim]], true)
+try_loadstring("\27LJ\1\2:\0\0\2\0\3\0\a4\0\0\0%\1\1\0>\0\2\0027\0\2\0002\1\0\0>\0\2\1G\0\1\0\nsetup\rtwilight\frequire\0", "config", "twilight.nvim")
+time([[Config for twilight.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\1\2�\1\0\0\3\0\b\0\v4\0\0\0%\1\1\0>\0\2\0027\0\2\0003\1\4\0003\2\3\0:\2\5\0013\2\6\0:\2\a\1>\0\2\1G\0\1\0\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\a\0\0\blua\vpython\tyaml\tjson\vpython\15javascript\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\1\0026\0\0\2\0\3\0\0064\0\0\0%\1\1\0>\0\2\0027\0\2\0>\0\1\1G\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
 time([[Config for gitsigns.nvim]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
-time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd lsp_signature.nvim ]]
+time([[Sequenced loading]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file MarkdownPreview lua require("packer.load")({'markdown-preview.nvim'}, { cmd = "MarkdownPreview", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 if should_profile then save_profiles() end
 
 end)

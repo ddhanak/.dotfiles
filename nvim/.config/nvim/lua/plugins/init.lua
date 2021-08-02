@@ -1,7 +1,8 @@
 local uiconf = require('plugins.ui.config')
 local editorconf = require('plugins.editor.config')
+local lspconf = require('plugins.lsp.config')
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
 
   -- Essentials
   use 'wbthomason/packer.nvim'
@@ -9,6 +10,19 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
+
+  -- LSP (collection of common configurations)
+  use { 'neovim/nvim-lspconfig', config = lspconf.nvim_lsp }
+  -- LSP (install language servers)
+  use { 'kabouzeid/nvim-lspinstall' }
+  -- LSP (autocompletion)
+  use { 'hrsh7th/nvim-compe', config = lspconf.compe }
+  -- LSP (pictograms)
+  use { 'onsails/lspkind-nvim', config = lspconf.lspkind }
+  -- LSP (signature while you type)
+  use { 'ray-x/lsp_signature.nvim', after = 'nvim-lspconfig' }
+  -- LSP
+  use { 'glepnir/lspsaga.nvim' }
 
   -- UI
   use { 'projekt0n/github-nvim-theme', opt = false, config = uiconf.github }

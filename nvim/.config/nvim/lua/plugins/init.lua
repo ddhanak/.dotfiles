@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
     },
     config = function() require('gitsigns').setup() end
   }
+  use { 'sunjon/shade.nvim', config = uiconf.shade }
 
   -- Lua dev
   use { 'tjdevries/nlua.nvim' }

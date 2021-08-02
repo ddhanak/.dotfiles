@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
   use { 'onsails/lspkind-nvim', config = lspconf.lspkind }
   -- LSP (signature while you type)
   use { 'ray-x/lsp_signature.nvim', after = 'nvim-lspconfig' }
-  -- LSP
+  -- LSP (saga)
   use { 'glepnir/lspsaga.nvim' }
 
   -- UI
@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
   -- Editor
   use { 'junegunn/vim-easy-align' }
   use { 'easymotion/vim-easymotion' }
+  use { 'windwp/nvim-autopairs', after = 'nvim-lspconfig', config = lspconf.autopairs }
 
   -- Markdown
   use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}

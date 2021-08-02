@@ -36,13 +36,15 @@ local plug_map = {
     ["n|<leader>ca"] = map_cr("Lspsaga code_action"):with_noremap():with_silent(),
     ["v|<leader>ca"] = map_cu("Lspsaga range_code_action"):with_noremap():with_silent(),
     ["n|gd"] = map_cr('Lspsaga preview_definition'):with_noremap():with_silent(),
-    ["n|gD"] = map_cmd('<Cmd>lua vim.lsp.buf.definition()<CR>'):with_noremap():with_silent(),
     ["n|gs"] = map_cr('Lspsaga signature_help'):with_noremap():with_silent(),
-    ["n|gr"] = map_cr('Lspsaga rename'):with_noremap():with_silent(),
-    ["n|gh"] = map_cr('Lspsaga lsp_finder'):with_noremap():with_silent(),
-    ["n|gt"] = map_cmd("<cmd>lua vim.lsp.buf.type_definition()<CR>"):with_noremap():with_silent(),
-    ["n|<leader>cw"] = map_cmd("<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"):with_noremap():with_silent(),
+    ["n|<leader>rn"] = map_cr('Lspsaga rename'):with_noremap():with_silent(),
     ["n|<leader>ce"] = map_cr('Lspsaga show_line_diagnostics'):with_noremap():with_silent(),
+    ["n|gh"] = map_cr('Lspsaga lsp_finder'):with_noremap():with_silent(),
+    ["n|gD"] = map_cmd('<cmd>lua vim.lsp.buf.definition()<CR>'):with_noremap():with_silent(),
+    ["n|gt"] = map_cmd("<cmd>lua vim.lsp.buf.type_definition()<CR>"):with_noremap():with_silent(),
+    ["n|gi"] = map_cmd("<cmd>lua vim.lsp.buf.implementation()<CR>"):with_noremap():with_silent(),
+    ["n|gr"] = map_cmd("<cmd>lua vim.lsp.buf.references()<CR>"):with_noremap():with_silent(),
+    ["n|<leader>cw"] = map_cmd("<cmd>lua vim.lsp.buf.workspace_symbol()<CR>"):with_noremap():with_silent(),
 
     -- Telescope
     ["n|<leader>ff"] = map_cu('Telescope find_files'):with_noremap():with_silent(),
@@ -75,5 +77,3 @@ local plug_map = {
 };
 
 bind.nvim_load_mapping(plug_map)
-
-

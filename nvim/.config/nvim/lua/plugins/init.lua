@@ -29,6 +29,7 @@ return require("packer").startup(function(use)
 					require("null-ls").builtins.formatting.stylua,
 					require("null-ls").builtins.formatting.black,
 					require("null-ls").builtins.formatting.isort,
+					require("null-ls").builtins.formatting.prettier,
 					require("null-ls").builtins.diagnostics.flake8,
 				},
 			})

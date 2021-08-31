@@ -11,7 +11,7 @@ function config.lualine()
     require('lualine').setup({
         options = {
             icons_enabled = true,
-            theme = 'github',
+            theme = 'tokyonight',
             disabled_filetypes = {}
         },
         sections = {

@@ -39,7 +39,8 @@ return require("packer").startup(function(use)
 	})
 
 	-- UI
-	use({ "projekt0n/github-nvim-theme", opt = false, config = uiconf.github })
+	-- use({ "projekt0n/github-nvim-theme", opt = false, config = uiconf.github })
+    use({ "folke/tokyonight.nvim", opt = false })
 	use({ "kyazdani42/nvim-tree.lua", config = uiconf.nvim_tree })
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "hoob3rt/lualine.nvim", config = uiconf.lualine })

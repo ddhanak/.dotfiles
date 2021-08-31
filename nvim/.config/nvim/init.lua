@@ -19,3 +19,6 @@ require('plugins')
 
 -- Keymaps
 require('keymap')
+
+vim.g.python_host_prog = '/home/deep/.pyenv/versions/neovim2/bin/python'
+vim.g.python3_host_prog = '/home/deep/.pyenv/versions/neovim3/bin/python'

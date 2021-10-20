@@ -11,7 +11,7 @@ function config.lualine()
     require('lualine').setup({
         options = {
             icons_enabled = true,
-            theme = 'github',
+            theme = 'tokyonight',
             disabled_filetypes = {}
         },
         sections = {
@@ -67,6 +67,8 @@ function config.nvim_tree()
             untracked = "★"
         }
     }
+
+    require'nvim-tree'.setup {}
 end
 
 function config.twilight() require('twilight').setup {} end
